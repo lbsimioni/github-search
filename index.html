@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Asyn</title>
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="bg-light">
+        <!-- Header -->
+        <header class="mb-4">
+            <nav class="navbar navbar-dark bg-dark">
+                <span class="navbar-brand mb-0 h1">Pesquisar usuários no GitHub</span>
+              </nav>
+        </header>
+
+        <!-- Toaster -->
+        <div class="position-fixed toast-container" id="toast-container">
+
+        </div>
+        
+        <!-- Content Body -->
+        <main>
+            <!-- Form Container -->
+            <div class="container">
+                <div class="card" id="card-input">
+                    <div class="card-header bg-dark">
+                        <div class="btn float-right btn-colapse" type="button" data-toggle="collapse" data-target="#card-input-body" aria-expanded="true" aria-controls="card-input-body">
+                            <span class="material-icons text-light">
+                                keyboard_arrow_up
+                            </span>
+                        </div>
+                        
+                        <h4 class="text-light">Faça sua busca!</h4>
+                        
+                    </div>
+                    <div class="card-body collapse show" id="card-input-body">
+                        <label for="title">Usuário</label>&nbsp;
+                        <div class="input-group mb-3">
+                            <input class="form-control" id="user" name="user" type="text" placeholder="Ex.: (lbsimioni)" autofocus="true">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"
+                                id="btn">Pesquisar</button>
+                            </div>
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">
+                            Use '; ' para separar os usuários dos dev's, caso deseja adicionar mais de 1 por vez - Ex.: (lbsimioni; chiavegattogui)
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Devs List -->
+            <div class="container invisible py-2" id="card-visible" >
+                <div class="card">
+                    <div class="card-header bg-dark">
+                        <div class="btn float-right btn-colapse" type="button" data-toggle="collapse" data-target="#card-list" aria-expanded="true" aria-controls="card-list">
+                            <span class="material-icons text-light">
+                                keyboard_arrow_up
+                            </span>
+                        </div>
+
+                        <h5 class="text-light">Lista de dev's</h5>
+                    </div>
+                    <div class="card-body collapse show" id="card-list">
+                        <div class="row" id="card-container"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark py-2 text-center mt-4">
+            <span class="text-white">&copy; Leonardo Bucioli Simioni - 2020</span>
+
+            <script src="libs/bootstrap/jquery/jquery.min.js" type="text/javascript"></script>
+            <script src="libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="js/devs.js" type="text/javascript"></script>
+            <script src="js/dom-manipulator.js" type="text/javascript"></script>
+
+            <!-- Import de Requests -->
+            <!-- Para AJAX puro-->
+            <!-- <script src="js/requests/ajax.js" type="text/javascript"></script>  -->
+
+            <!-- Para AJAX com Promise -->
+            <!-- <script src="js/requests/promise.js" type="text/javascript"></script>  -->
+
+            <!-- Para axios -->
+            <script src="libs/axios/axios.min.js" type="text/javascript"></script>
+            <script src="js/requests/axios.js" type="text/javascript"></script>
+
+            <script src="js/geral.js" type="text/javascript"></script>
+        </footer>
+    </body>
+</html>

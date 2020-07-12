@@ -1,0 +1,26 @@
+main {
+    min-height: calc(100vh - 96px - 3rem);
+}
+
+.toast-container {
+    position: fixed; 
+    top: 60px; 
+    right: 5px;
+    z-index: 999;
+}
+
+.toast.show {
+    z-index: 999;
+}
+
+.toast-warning {
+    background-color: #f89406 !important;
+}
+
+.card {
+    height: 100%;
+}
+
+button:focus {
+    outline: none !important;
+}
