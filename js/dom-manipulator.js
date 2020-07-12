@@ -37,11 +37,18 @@ class Manipulator {
         let cardContent = document.createElement('div');
         cardContent.className = 'card-body';
 
+        let cardSubtitle = document.createElement('span');
+        cardSubtitle.className = 'text-muted';
+
+        let cardSubtitleText = document.createTextNode(dev.login);
+        cardSubtitle.appendChild(cardSubtitleText);
+        cardContent.appendChild(cardSubtitle);
+
         let cardTitle = document.createElement('h5');
-        cardTitle.className = 'card-title';
+        cardTitle.className = 'card-title mt-1';
         cardTitle.innerText = name;
         cardContent.appendChild(cardTitle);
-    
+
         let cardContentP = document.createElement('p');
         cardContentP.className = 'card-text';
         cardContentP.innerText = content;

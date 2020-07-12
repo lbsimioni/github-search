@@ -17,6 +17,10 @@ O projeto é composto por uma classe responsável por cuidar do DOM, ou seja, cr
 
 O projeto está rodando em `https://lbsimioni.github.io/github-search/`, utilizando o AXIOS para requisições http.
 
+## Observações
+
+O carregamento dos cards, com as informações dos dev's, são feitos de forma asyncrona, sem possuir um controle, ou seja, no carregamento da página, após ter uma lista de dev's, pode ocorrer a troca da ordem em que os dev's são exibidos.
+
 # English
 
 The project was developed with the aim to synthesizing knowledge in http requests using pure JavaScript.
@@ -34,3 +38,7 @@ The project consists of a class responsible for taking care of the DOM, that is,
 ## Availability
 
 The demo of project is running at `https://lbsimioni.github.io/github-search/` and use AXIOS for http requests.
+
+## Notes
+
+The loading of the cards, with the information from the dev's, is done asynchronously, without having a control, that is, when loading the page, after having a list of dev's, can be an exchange of the order in which the dev's are displayed.
