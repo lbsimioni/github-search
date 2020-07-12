@@ -28,14 +28,14 @@ function init() {
     Devs.loadDevs();
 }
 
-$('.btn-colapse').on('click', function (button) {
-    const icon = button.target.innerHTML;
+$('.btn-colapse').on('click', function () {
+    const icon = this.childNodes[1];
     const downArrow = 'keyboard_arrow_down';
     const upArrow = 'keyboard_arrow_up'
-    if(icon === downArrow) {
-        button.target.innerHTML = upArrow;
+    if(icon.innerText === downArrow) {
+        this.childNodes[1].innerText = upArrow;
     } else {
-        button.target.innerHTML = downArrow;
+        this.childNodes[1].innerText = downArrow;
     }
 });
 
